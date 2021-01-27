@@ -22,22 +22,22 @@ const DataContainer: React.FC = () => {
         </div>
         <div className="initial-content">
           <div className="initial-content-line">
-            <a href="/partido/icon" className='highlight-text'> Teste </a>
+            <a href="/deputado/nome" className='highlight-text'> Deputado </a>
+            <p>R$ 30.203.021,00</p>
+          </div>
+          <div className="initial-content-line">
+            <a href="/deputado/nome" className='highlight-text'> Deputado </a>
+            <p>R$ 30.203.021,00</p>
+          </div>
+          <div className="initial-content-line">
+            <a href="/deputado/nome" className='highlight-text'> Deputado </a>
             <p>R$ 30.203.021,00</p>
           </div>
           <div className="initial-content-line">
             <a href="/partido/icon" className='highlight-text'> Teste </a>
             <p>R$ 30.203.021,00</p>
           </div>
-          <div className="initial-content-line">
-            <a href="/partido/icon" className='highlight-text'> Teste </a>
-            <p>R$ 30.203.021,00</p>
-          </div>
-          <div className="initial-content-line">
-            <a href="/partido/icon" className='highlight-text'> Teste </a>
-            <p>R$ 30.203.021,00</p>
-          </div>
-          <a href="/partido/icon" className="link-page highlight-text">
+          <a href="/deputado/nome" className="link-page highlight-text">
           Página da entidade
         </a>
         </div>

@@ -18,7 +18,7 @@ const DeputyChart: React.FC<Props> = ({ fullData }) => {
             (deputy.finalValue / fullData.topFiveDeputies[0].finalValue) * 70
           }
         >
-          <h4>{index + 1 + "º " + deputy.name}</h4>
+          <a href={`/search?query=${deputy.name}`} >{index + 1 + "º " + deputy.name}</a>
           <div>{deputy.formatedFinalValue}</div>
         </DeputyLine>
       ))}

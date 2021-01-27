@@ -19,7 +19,7 @@ const CategoryChart: React.FC<Props> = ({ fullData }) => {
             70
           }
         >
-          <h4>{category.name}</h4>
+          <a href={`/search?query=${category.name}`} >{category.name}</a>
           <div />
         </CategoryLine>
       ))}

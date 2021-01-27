@@ -36,6 +36,10 @@ export const DeputyLine = styled.div<{ percent: number }>`
     align-items: center;
     justify-content: space-between;
   }
+  a {
+    color: #00578a;
+    font-weight: bold;
+  }
 
   h1 {
     font-size: 12px;

@@ -27,13 +27,13 @@ const PartiesChart: React.FC<Props> = ({ fullData }) => {
       {fullData.topFiveParties.map((item) => (
         <PartyContainer>
           <HeaderPartyContainer onClick={expandContainer}>
-            <h4>{item.name}</h4>
+            <a href={`/search?query=${item.name}`}>{item.name}</a>
             <div>{item.formatedMidValue}</div>
           </HeaderPartyContainer>
           <MainPartyContainer>
             {item.partDeputies.map((deputy) => (
               <PartyDeputyLine>
-                <h5>{deputy.name}</h5>
+                <a className="deputy-name" href={`/search?query=${deputy.name}`}>{deputy.name}</a>
                 <h5>{deputy.formatedFinalValue}</h5>
               </PartyDeputyLine>
             ))}

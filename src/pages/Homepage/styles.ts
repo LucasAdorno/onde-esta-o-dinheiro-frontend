@@ -11,13 +11,15 @@ export const Container = styled.div`
   align-items: center;
 
   .redHeader {
-    width: 100%;
+    width: 100vw;
     min-height: 64px;
     padding: 10px 10px 10px 40px;
     margin-bottom: 10px;
     background-color: #ed1a3b;
 
     h1 {
+      /* justify-content: center; */
+      text-align: center;
       color: white;
 
       @media (max-width: 767px) {

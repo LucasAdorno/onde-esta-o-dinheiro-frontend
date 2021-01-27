@@ -36,7 +36,10 @@ export const CategoryLine = styled.div<{ percent: number }>`
     font-size: 14px;
   }
 
-  h4 {
+  a, h4 {
+    color: #00578a;
+    font-weight: bold;
+
     background: lightgrey;
     padding: 10px 20px 10px 20px;
     margin-right: 0px;

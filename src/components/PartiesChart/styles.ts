@@ -20,6 +20,15 @@ export const Container = styled.div`
   h3 {
     margin-bottom: 10px;
   }
+
+  a {
+    color: #00578a;
+    font-weight: bold;
+  }
+
+  .deputy-name {
+    font-size: 13px;
+  }
 `;
 
 export const PartyContainer = styled.div`

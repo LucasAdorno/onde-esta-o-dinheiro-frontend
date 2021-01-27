@@ -5,7 +5,7 @@ import { Container } from "./styles";
 const Header: React.FC = () => {
   return (
     <Container>
-      <h1>ONDE FOI PARAR O DINHEIRO?</h1>
+      <a href="/" >ONDE FOI PARAR O DINHEIRO?</a>
     </Container>
   );
 };
