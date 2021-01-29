@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import FilterInBox from "../../components/FilterInBox";
 import SearchDiv from "../../components/SearchDiv";
 import api from "../../services/api";
-import { Container } from "./styles";
+import { Container, Content, ResultsBox, ResultItem } from "./styles";
 
 interface Props {
   match: {
@@ -18,6 +18,7 @@ export interface ITotalData {
   partido: string;
   deputados: {
     deputado: string;
+    gasto_total: number;
     gastos: {
       nota: string;
       categoria: string;
@@ -41,17 +42,42 @@ const SearchPage: React.FC<Props> = ({ match }) => {
   }, [match]);
 
   return (
-    <>
-      {totalData ? (
-        <Container>
-          <SearchDiv />
+    <Container>
+      <SearchDiv />
 
+      {totalData ? (
+        <Content>
           <FilterInBox totalData={totalData} />
-        </Container>
+          <ResultsBox>
+            {totalData.map(({ deputados }) =>
+              deputados.map(({ deputado, gastos, gasto_total }) => (
+                <ResultItem
+                  onClick={(e) =>
+                    e.currentTarget.classList.toggle("result-expand")
+                  }
+                >
+                  <div className="item-header">
+                    <h4>{deputado}</h4>
+                    <div>R${gasto_total.toLocaleString("pt-BR")},00</div>
+                  </div>
+                  <div className="gastos-box">
+                    {gastos.map(({ recebedor, categoria, valor }) => (
+                      <div>
+                        <h5>{recebedor}</h5>
+                        <h5>{categoria}</h5>
+                        <h5>{valor}</h5>
+                      </div>
+                    ))}
+                  </div>
+                </ResultItem>
+              ))
+            )}
+          </ResultsBox>
+        </Content>
       ) : (
         <></>
       )}
-    </>
+    </Container>
   );
 };
 
